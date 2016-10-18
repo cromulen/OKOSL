@@ -29,10 +29,10 @@
 
 \title{Osnove korištenja operacijskog sustava Linux}
 \subtitle{01. Uvod}
-\author[Antun Aleksa, Josip Žuljević]{Antun Aleksa, Josip Žuljević\\{\small Nositelj: dr. sc. Stjepan Groš}}
+\author[Sabrina Miškulin, Gregor Orlić, Marin Petričević, Leonard Volarić-Horvat]{Sabrina Muškulin, Gregor Orlić, Marin Petričević, Leonard Volarić-Horvat\\{\small Nositelj: dr. sc. Stjepan Groš}}
 \institute[FER]{Sveučilište u Zagrebu \\
 				Fakultet elektrotehnike i računarstva}
-				
+
 \date{\todayiso}
 
 \begin{document}
@@ -68,7 +68,7 @@
     \end{itemize}
 	\end{itemize}
   \item Ovakav opis skriva puno detalja, ali definira dvije najbitnije uloge
-        operacijskog sustava 
+        operacijskog sustava
 \end{itemize}
 \end{frame}
 
@@ -79,7 +79,7 @@
    \begin{itemize}
      \item Pisanje aplikacija za samo jedan je komplicirano
    \end{itemize}
-  \item OS preuzima detalje 
+  \item OS preuzima detalje
   \begin{itemize}
     \item Korisnik (u teoriji) treba znati samo što želi
     \item OS zna kako pristupiti određenom uređaju
@@ -97,7 +97,7 @@
 \begin{itemize}
   \item OS je posrednik između aplikacije i sklopovlja
   \begin{itemize}
-    \item korisnik $\rightarrow$ aplikacija $\rightarrow$ OS 
+    \item korisnik $\rightarrow$ aplikacija $\rightarrow$ OS
           $\rightarrow$ uređaj
   \end{itemize}
   \item Aplikacijama nikada nije dopušteno izravno pristupanje uređajima
@@ -144,7 +144,7 @@
     \item Prvotno potpuno besplatan
   \end{itemize}
 \end{itemize}
-\end{frame} 
+\end{frame}
 
 \begin{frame}[t]
 \frametitle{Unix porodica operacijskih sustava (2)}
@@ -170,7 +170,7 @@
 \begin{frame}[t]
 \frametitle{Razvoj Linuxa (1)}
 \begin{itemize}
-  \item Distribuirani razvoj 
+  \item Distribuirani razvoj
   \item Tisuće programera diljem svijeta
   \begin{itemize}
     \item Velik broj nezavisnih, gledano pojedinačno
@@ -180,6 +180,7 @@
     \end{itemize}
   \item Pišu se moduli, zakrpe, dokumentacija
   \item Izmjene se predlažu odgovornim osobama
+  \item \href{https://github.com/torvalds/linux}{Cijeli kernel mozete vidjeti na GitHub-u (link)}
   \end{itemize}
 \end{itemize}
 \end{frame}
@@ -188,7 +189,7 @@
 \frametitle{Razvoj Linuxa (2)}
 \begin{itemize}
   \item Linux je podijeljen na podsustave
-  \item Svaki podsustav ima tzv. ``održavatelja'' (engl. 
+  \item Svaki podsustav ima tzv. ``održavatelja'' (engl.
         \emph{maintainer})
   \begin{itemize}
     \item Održavatelj odlučuje o izmjenama (više-manje)
@@ -266,7 +267,7 @@
     \item GNOME, KDE, Xfce, Awesome, \ldots
     \item apt, yum, pacman, \ldots
   \end{itemize}
-  \item Distribucije su konačni proizvodi, operacijski sustavi u 
+  \item Distribucije su konačni proizvodi, operacijski sustavi u
         najširem smislu
 \end{itemize}
 \end{frame}
@@ -296,12 +297,12 @@
   \begin{itemize}
     \item Kroz grafičko sučelje i putem ljuske/komandne linije
   \end{itemize}
-  \item Ljuska je aplikacija(!) koja prihvaća korisnikove naredbe i 
+  \item Ljuska je aplikacija(!) koja prihvaća korisnikove naredbe i
         izvršava ih
   \begin{itemize}
     \item Ljuska olakšava komunikaciju sa sustavom
   \end{itemize}
-  \item Ljuska označava spremnost za prihvaćanje naredbi prikazivanjem 
+  \item Ljuska označava spremnost za prihvaćanje naredbi prikazivanjem
         naredbenog retka (engl. \emph{command prompt})
 \end{itemize}
 \end{frame}
@@ -309,7 +310,7 @@
 \begin{frame}[t]
 \frametitle{Komunikacija sa računalom (2)}
 \begin{itemize}
-  \item Kada ljuska pokrene naredbu, čeka da se njeno izvršavanje 
+  \item Kada ljuska pokrene naredbu, čeka da se njeno izvršavanje
         završi
   \item Za to vrijeme ljuska ne prikazuje narebenu liniju!
   \begin{itemize}
@@ -338,7 +339,7 @@
     \end{itemize}
     \item U direktoriju \shell{/usr/share/doc} dosta materijala
   \end{itemize}
-  \item Sadrži opise i načine korištenja naredbi, funkcija i 
+  \item Sadrži opise i načine korištenja naredbi, funkcija i
         konfiguracijskih datoteka
 \end{itemize}
 \end{frame}
@@ -414,7 +415,7 @@
 \begin{itemize}
   \item Naredbe se pokreću na sljedeći način
   \begin{itemize}
-    \item[] \textless naredba\textgreater \textless opcije\textgreater 
+    \item[] \textless naredba\textgreater \textless opcije\textgreater
           \textless arugmenti\textgreater
   \end{itemize}
   \item Argumenti označavaju nad čime se vrši naredba
@@ -434,7 +435,7 @@
 \begin{itemize}
   \item Opcije utječu na ponašanje naredbe
   \begin{itemize}
-    \item duge opcije (engl. \emph{long options}) počinju s ``-{}-''  
+    \item duge opcije (engl. \emph{long options}) počinju s ``-{}-''
     \item kratke opcije (engl. \emph{short options}) počinju s ``-''
   \end{itemize}
   \item Naredbe obično imaju različite opcije za isto ponašanje
@@ -457,7 +458,7 @@
   \end{itemize}
   \item Primjer: Izvršiti sljedeću naredbu
   \item[] \small\texttt{\$ ls -l /bin/sh}
-  \item[] \small\texttt{lrwxrwxrwx 1 root root 4 2010-04-29 10:44 /bin/sh 
+  \item[] \small\texttt{lrwxrwxrwx 1 root root 4 2010-04-29 10:44 /bin/sh
                         -> bash}
 \end{itemize}
 \end{frame}
@@ -483,7 +484,7 @@
   \end{itemize}
   \item Primjer
   \item[] \small\texttt{\$ ls -l /bin/sh}
-  \item[] \small\texttt{lrwxrwxrwx 1 root root 4 2010-04-29 10:44 /bin/sh 
+  \item[] \small\texttt{lrwxrwxrwx 1 root root 4 2010-04-29 10:44 /bin/sh
                         -> bash}
   \item Opcija \texttt{-h} (engl. \emph{human readable})
   \begin{itemize}
@@ -514,14 +515,14 @@
   \item Direktoriji su organizirani kao stablo
   \item U Unix operacijskom sustavu nema diskova
   \begin{itemize}
-    \item Sve je \textbf{jedno} stablo direktorija s \textbf{jednim} 
+    \item Sve je \textbf{jedno} stablo direktorija s \textbf{jednim}
           korijenom
   \end{itemize}
   \centering
   \begin{tikzpicture}
     \node {/ (root)}
-        child { 
-          node {home} 
+        child {
+          node {home}
           child {node {student} }
           child {node {predavac} }
         }
@@ -529,7 +530,7 @@
     ;
 \end{tikzpicture}
 \end{itemize}
-\end{frame} 
+\end{frame}
 
 
 \begin{frame}[t]
@@ -540,7 +541,7 @@
   \begin{itemize}
     \item Korisnik ili aplikacija
   \end{itemize}
-  \item Možemo saznati koji je radni direktorij naredbom \texttt{pwd} 
+  \item Možemo saznati koji je radni direktorij naredbom \texttt{pwd}
         \\(engl. \emph{print working directory})
 \end{itemize}
 \end{frame}
@@ -553,25 +554,25 @@
     \item Služi za spremanje osobnih podataka i postavki
     \item Korisnik ima ovlasti za pisanje i brisanje unutar svog matičnog
           direktorija
-    \item Izvan matičnog direktorija \textbf{nije dozvoljeno} pisanje 
+    \item Izvan matičnog direktorija \textbf{nije dozvoljeno} pisanje
           korisnicima koji nisu administratori
   \end{itemize}
   \item Neposredno nakon pokretanja ljuske, trenutni direktorij je matični
-        direktorij 
+        direktorij
 \end{itemize}
 \end{frame}
 
 \begin{frame}[t]
 \frametitle{Relativna i apsolutna staza (1)}
 \begin{itemize}
-  \item Položaj datoteke ili direktorija na Unix/Linux sustavu može se 
+  \item Položaj datoteke ili direktorija na Unix/Linux sustavu može se
         zadati
   \begin{itemize}
     \item Apsolutno - počinje znakom ``\texttt{/}''
     \begin{itemize}
       \item[] Primjer: \texttt{/home/student/okosl}
     \end{itemize}
-    \item Relativno 
+    \item Relativno
     \begin{itemize}
       \item[] Primjer: \texttt{student/okosl}
     \end{itemize}
@@ -612,27 +613,27 @@
     \item Stvara sve potrebne poddirektorije ako ne postoje
   \end{itemize}
 \end{itemize}
-\end{frame} 
+\end{frame}
 
 \begin{frame}[t]
 \frametitle{Prikaz sadržaja direktorija}
 \begin{itemize}
   \item Naredba \texttt{ls} ispisuje sadržaj direktorija
-  \item Opcijom \texttt{-d} ne izlistava se sadržaj direktorija već 
+  \item Opcijom \texttt{-d} ne izlistava se sadržaj direktorija već
         informacije o samom direktoriju
 \end{itemize}
 \end{frame}
-    
+
 
 \begin{frame}[t]
 \frametitle{Promjena direktorija (1)}
 \begin{itemize}
-  \item Promjena direktorija obavlja se naredbom \texttt{cd} (engl. 
+  \item Promjena direktorija obavlja se naredbom \texttt{cd} (engl.
         \emph{change directory})
-  \item Novi direktorij se zadaje 
+  \item Novi direktorij se zadaje
   \begin{itemize}
     \item relativno u odnosu na tekući direktorij
-    \item apsolutno u odnosu na korijenski direktorij  
+    \item apsolutno u odnosu na korijenski direktorij
   \end{itemize}
   \item Naredba \texttt{cd} bez argumenata vraća u matični direktorij
 \end{itemize}
@@ -648,9 +649,9 @@
   \end{itemize}
   \item Primjeri
   \begin{itemize}
-    \item \texttt{cd . } 
+    \item \texttt{cd . }
     \begin{itemize}
-      \item Mijenja direktorij u tekući direktorij, efektivno nema 
+      \item Mijenja direktorij u tekući direktorij, efektivno nema
                promjene
     \end{itemize}
     \item \texttt{cd .. }
@@ -672,7 +673,7 @@
   \item Česta pogreška korisnika DOS-a
   \begin{itemize}
     \item Upisivanje \texttt{cd..} (bez razmaka)
-    \item Na Unixu to je posebna naredba (\emph{.} može biti sastavni dio 
+    \item Na Unixu to je posebna naredba (\emph{.} može biti sastavni dio
           imena)
   \end{itemize}
 \end{itemize}
@@ -686,7 +687,7 @@
   \begin{tikzpicture}[auto, >=latex]
   \node{\$HOME}
     child {
-      node (a) {student} 
+      node (a) {student}
       child {
         node (b) {VJEZBA}
         child { node {dir1} }
@@ -694,7 +695,7 @@
       }
     }
   ;
-  \node (c) [left=1cm of a] {\$HOME/student/VJEZBA/../}; 
+  \node (c) [left=1cm of a] {\$HOME/student/VJEZBA/../};
   \node (d) [left=1cm of b] {\$HOME/student/./VJEZBA};
   \draw[->] (c) -- (a);
   \draw[->] (d) -- (b);
@@ -733,28 +734,33 @@
 \end{tabular}
 \end{frame}
 
+\section{Git}
 \begin{frame}[t]
 \frametitle{Upravljanje verzijama datoteke}
 \begin{itemize}
   \item \texttt{git init}
   \item \texttt{git add .}
   \item \texttt{git commit -am 'initialized project'}
-  \item \texttt{git push origin master}
+	\item \texttt{git remote add origin [adresa repozitorija]}
+	\item \texttt{git push origin master}
 
   \item \texttt{log, reset, pull, fetch, merge, remote, checkout}
   \item privatni i javni ključevi
+  \item \href{http://rogerdudler.github.io/git-guide/}{Kratak reference na najbitnije naredbe u git-u}
 \end{itemize}
 \end{frame}
 
+\section{Package Manager}
 \begin{frame}[t]
 \frametitle{Upravljanje paketima}
 \begin{itemize}
   \item paket je program
   \item \texttt{yum, apt, pacman, zypper \ldots}
-  \item \texttt{software manager}
-  \item repozitoriji
-  \item \texttt{apt-get update}
-  \item \texttt{apt-get install git}
+  \item Primjer naredbi za apt:
+  \begin{itemize}
+  	\item  \texttt{apt-get update}
+	\item \texttt{apt-get install git}
+  \end{itemize}
 \end{itemize}
 \end{frame}
 
