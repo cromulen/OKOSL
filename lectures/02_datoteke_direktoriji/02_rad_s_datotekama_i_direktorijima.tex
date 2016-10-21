@@ -596,6 +596,19 @@
 \end{itemize}
 \end{frame}
 
+\section{Tvrde poveznice}
+\begin{frame}[t]
+\frametitle{Tvrde poveznice (1)}
+\begin{itemize}
+  \item engl. \emph{hard link}
+  \item Više datoteka koje referenciraju iste podatke na datotečnom sustavu (inode)
+  \begin{itemize}
+    \item Tvrde poveznice su ravnopravne i uređivanje ili pomicanje jedne ne lomi druge
+  \end{itemize}
+  \item Naredbom \shell{ln} stvaraju se simboličke poveznice
+\end{itemize}
+\end{frame}
+
 \section{Simboličke poveznice}
 \begin{frame}[t]
 \frametitle{Simboličke poveznice (1)}
@@ -604,6 +617,7 @@
   \item Poveznice služe za brže pristupanje podacima
   \begin{itemize}
     \item Poput prečaca (engl. \emph{shortcut}) na Windows sustavu
+		\item Pokazuju \emph{putanju} do druge datoteke koja možda više ne postoji
   \end{itemize}
   \item Naredbom \shell{ln -s} stvaraju se simboličke poveznice
 \end{itemize}
@@ -779,7 +793,7 @@
   \shell{df} & ispis zauzeća po particijama \\ \hline
   \shell{du} & zauzeće prostora po direktorijima \\ \hline
   \shell{touch} & stvaranje prazne datoteke \\ \hline
-  \shell{ln -s} & stvaranje simboličke poveznice \\ \hline
+  \shell{ln} & stvaranje poveznica \\ \hline
   \shell{cat} & pregled sadržaja datoteke \\ \hline
   \shell{stat} & detaljnje informacije o datoteci/direktoriju \\ \hline
   \shell{file} & ispis tipa datoteke \\ \hline
